@@ -8,23 +8,29 @@ fi
 echo "------------------------------------[~/tianff/codes/common/environment.sh]"
 
 #---------------------------------------------[dir]
-homedir=${PWD%group/codes/common}
+homedir=`find ~ -name 'server.me.sh'`
+homedir=${homedir%server.me.sh}
 echo "homedir="${homedir}
+
 #---------------------------------------------[vim]
-export VIMINIT="source ${homedir}group/codes/common/vimrc.vim"
+export VIMINIT="source ${homedir}/codes/common/vimrc.vim"
+
 #---------------------------------------------[alias]
 cdl() {
     cd "${1}";
     ll -a;
 }
 alias cpi="cp -i"
+
 #---------------------------------------------[dir]
 software_bin=${homedir}software/bin/
 echo "software_bin="${software_bin}
 vasp_pot=${homedir}software/vasp/potpaw_PBE.54/
 echo "vasp_pot=${vasp_pot}"
+
 #---------------------------------------------[myserver]
-source ${homedir}server/server.sh
+source ${homedir}server.me.sh
+
 #---------------------------------------------[jobsub]
 if [ "$mycluster" = "qsub" ]; then
     alias jobsub="qsub"
@@ -36,7 +42,7 @@ elif [ "$mycluster" = "bsub" ]; then
     alias jobsub="bsub <"
     alias jobkill="bkill"
 elif [ "$mycluster" = "none" ]; then
-    echo ""
+    echo "none"
 else
     echo "ERROR: 'mycluster' not exist!"
     exit
