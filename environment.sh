@@ -1,5 +1,5 @@
 #!/bin/bash
-# 2021.01.27
+# 2021.04.01
 if [ ! -z ${environment+x} ]; then
 if [ "$environment" == 'pass' ] ;then
     return
@@ -8,8 +8,7 @@ fi
 echo "------------------------------------[~/tianff/codes/common/environment.sh]"
 
 #---------------------------------------------[dir]
-homedir=`find ~ -name 'server.me.sh'`
-homedir=${homedir%server.me.sh}
+homedir=`find ~ -name 'server.me.sh'|xargs dirname`/
 echo "homedir="${homedir}
 
 #---------------------------------------------[vim]
