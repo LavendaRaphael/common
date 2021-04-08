@@ -8,7 +8,7 @@ fi
 echo "------------------------------------[~/tianff/codes/common/environment.sh]"
 
 #---------------------------------------------[dir]
-homedir=`find ~ \( -path *liumin -o -path *.local \) -prune -o -name "server.me.sh" -print -quit|xargs dirname`/
+homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
 echo "homedir="${homedir}
 
 #---------------------------------------------[vim]
