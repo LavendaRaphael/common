@@ -1,5 +1,5 @@
 #!/bin/bash
-homedir=`find ~ -name 'server.me.sh'|xargs dirname`/
+homedir=`find ~ \( -path *liumin -o -path *.local \) -prune -o -name "server.me.sh" -print -quit|xargs dirname`/
 source ${homedir}codes/common/environment.sh
 set -euo pipefail
 
