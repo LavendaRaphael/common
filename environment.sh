@@ -48,7 +48,10 @@ else
 fi
 
 #---------------------------------------------[shopt]
-shopt -s direxpand #启用目录变量tab扩展
+if [ "$myserver" != "SHTU" ]; then
+    shopt -s direxpand #启用目录变量tab扩展
+fi
+
 shopt -s expand_aliases #启用非交互脚本alias
 
 environment='pass'
