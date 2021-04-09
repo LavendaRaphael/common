@@ -5,7 +5,7 @@ if [ "$environment" == 'pass' ] ;then
     return
 fi
 fi
-echo "------------------------------------[~/tianff/codes/common/environment.sh]"
+echo "--------------------------------------------------------------------------[~/tianff/codes/common/environment.sh]"
 
 #---------------------------------------------[dir]
 homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
