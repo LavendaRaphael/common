@@ -53,6 +53,8 @@ if [ "$myserver" != "SHTU" ]; then
 fi
 
 shopt -s expand_aliases #启用非交互脚本alias
+shopt -s dotglob # 隐藏文件
+
 
 environment='pass'
 echo "========================================================================="
