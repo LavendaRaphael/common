@@ -48,9 +48,7 @@ else
 fi
 
 #---------------------------------------------[shopt]
-if [ "$myserver" != "SHTU" ]; then
-    shopt -s direxpand #启用目录变量tab扩展
-fi
+shopt | grep -q '^direxpand\b' && shopt -s direxpand
 
 shopt -s expand_aliases #启用非交互脚本alias
 shopt -s dotglob # 隐藏文件
