@@ -11,6 +11,15 @@ echo "--------------------------------------------------------------------------
 homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
 echo "homedir="${homedir}
 
+gotocode=${homedir}codes/groupcodes/202103_XasPtO/
+echo "gotocode="$gotocode
+
+gotowork_1=${homedir}group/202103_XasPtO/server/Pt-111_O_vac/Pt-111a4b4c4_O4_vac15/qe_hch_scf/
+echo "gotowork_1=$gotowork_1"
+
+gotowork_2=${homedir}group/202103_XasPtO/server/Pt-110_O_vac/Pt-110a12b2c4.5_O22_vac15/qe_hch_scf/
+echo "gotowork_2=$gotowork_2"
+
 #---------------------------------------------[vim]
 export VIMINIT="source ${homedir}/codes/common/vimrc.vim"
 
