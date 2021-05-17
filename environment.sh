@@ -33,7 +33,7 @@ alias cpi="cp -i"
 #---------------------------------------------[dir]
 software_bin=${homedir}software/bin/
 echo "software_bin="${software_bin}
-vasp_pot=${homedir}software/vasp/potpaw_PBE.54/
+vasp_pot=${homedir}software/potpaw_PBE.54/
 echo "vasp_pot=${vasp_pot}"
 
 #---------------------------------------------[myserver]
