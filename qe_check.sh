@@ -1,11 +1,14 @@
 #!/bin/bash
 set -euo pipefail
 
-scf_stdout=${1:-"scf.log"}
-xspectra_stdout=${1:-"xspectra.log"}
+while [[ $# -gt 0 ]]
+do
+
+scf_stdout="$1/scf.log"
+xspectra_stdout="$1/xspectra.log"
 
 if [ -f "$scf_stdout" ];then
-
+    echo "#------------------------------------[$scf_stdout]"
     awk '
     BEGIN{
         ORS=" "
@@ -27,7 +30,7 @@ fi
 
 
 if [ -f "$xspectra_stdout" ];then
-
+    echo "#------------------------------------[$xspectra_stdout]"
     awk '
     BEGIN{
         ORS=" "
@@ -42,3 +45,7 @@ if [ -f "$xspectra_stdout" ];then
     }' $xspectra_stdout
 
 fi
+
+shift
+
+done
