@@ -4,7 +4,7 @@ while true
 do
     result=$(git pull)
     echo $result
-    if  [[ $result =~ 'up to date' ]] 
+    if  [[ $result =~ 'Already' ]] 
     then
         exit
     fi
