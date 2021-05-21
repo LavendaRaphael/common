@@ -1,7 +1,7 @@
 #!/bin/bash
 set -euo pipefail
 
-while (.true.)
+while (true)
 do
     git pull
 done
