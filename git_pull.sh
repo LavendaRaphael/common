@@ -1,8 +1,13 @@
 #!/bin/bash
-set -euo pipefail
 
-while (true)
+while true
 do
-    git pull
+    result=$(git pull)
+    echo $result
+    if  [[ $result =~ 'up to date' ]] 
+    then
+        exit
+    fi
+    sleep 1s
 done
 
