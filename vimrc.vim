@@ -20,3 +20,4 @@ set laststatus=2 "显示状态栏（默认值为1，表示无法显示状态栏�
 set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strftime(\"%d/%m/%y\ -\ %H:%M\")} "状态栏配置"
 set nocompatible "关闭vi兼容
 set backspace=2 "删除
+set viminfo='1000 "yeld最大行数
