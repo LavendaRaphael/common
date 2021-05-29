@@ -46,8 +46,8 @@ fi
 #=========================================================[head]
 cat >>${jobname}.sh<<eof
 
-set -euo pipefail
 source ${homedir}codes/common/environment.sh
+set -euo pipefail
 SECONDS=0
 
 eof
