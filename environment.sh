@@ -27,6 +27,9 @@ echo "software_bin="${software_bin}
 vasp_pot=${homedir}software/potpaw_PBE.54/
 echo "vasp_pot=${vasp_pot}"
 
+#---------------------------------------------[path]
+export PATH=${homedir}software/vtstscripts-967:$PATH
+
 #---------------------------------------------[myserver]
 source ${homedir}server.me.sh
 
