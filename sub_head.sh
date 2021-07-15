@@ -14,10 +14,12 @@ if [ "$mycluster" = "qsub" ]; then
     cat > ${jobname}.sh <<eof
 #!/bin/bash
 #PBS -l nodes=${jobnodes}:ppn=${jobppn}
+#PBS -l walltime=240:00:00
 #PBS -N ${jobname}
 #PBS -q ${jobqueue}
 #PBS -j oe
 cd \$PBS_O_WORKDIR
+cat $PBS_NODEFILE > nodelist.log
 eof
 
 elif [ "$mycluster" = "sbatch" ]; then
@@ -28,6 +30,7 @@ elif [ "$mycluster" = "sbatch" ]; then
 #SBATCH -J ${jobname}
 #SBATCH -p ${jobqueue}
 #SBATCH -o %x.oe%j
+cat $SLURM_JOB_NODELIST > nodelist.log
 eof
 
 elif [ "$mycluster" = "bsub" ]; then

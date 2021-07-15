@@ -1,10 +1,15 @@
 #!/bin/bash
 set -euo pipefail
 
+rm -f vasp.log
+rm -f nodelist.log
+rm -f PENALTYPOT
+rm -f ICONST
+rm -f HILLSPOT
 rm -f *.xsd */*.xsd
 rm -f CHG */CHG
 rm -f CHGCAR */CHGCAR
-#rm -f CONTCAR */CONTCAR
+rm -f CONTCAR */CONTCAR
 rm -f DOSCAR */DOSCAR
 rm -f EIGENVAL */EIGENVAL
 rm -f IBZKPT */IBZKPT
