@@ -4,7 +4,7 @@ source ${homedir}codes/common/environment.sh
 set -euo pipefail
 
 jobname=test
-ncore=$[${maxppn}*3]
+ncore=$[${maxppn}*2]
 source ${homedir}codes/common/sub_head.sh
 #========================================[main script]
 cat >> ${jobname}.sh<<eof
