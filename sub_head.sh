@@ -48,6 +48,7 @@ fi
 
 #=========================================================[head]
 cat >>${jobname}.sh<<eof
+sort -u nodelist.log > tmp && mv tmp nodelist.log
 
 source ${homedir}codes/common/environment.sh
 set -euo pipefail
