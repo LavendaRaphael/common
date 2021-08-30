@@ -48,15 +48,11 @@ fi
 
 #=========================================================[head]
 cat >>${jobname}.sh<<eof
-sort -u nodelist.log > tmp && mv tmp nodelist.log
-
 source ${homedir}codes/common/environment.sh
 set -euo pipefail
 SECONDS=0
+sort -u nodelist.log > tmp && mv tmp nodelist.log
 
 eof
 
-#==========================================================[vasp]
-if [ -f "INCAR" ]; then
-    sed -i "/NCORE/c\  NCORE = $[($maxppn/2)]" INCAR
-fi
+
