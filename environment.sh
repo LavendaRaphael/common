@@ -9,7 +9,6 @@ echo "#=========================================================================
 
 #---------------------------------------------[dir]
 homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
-echo "homedir="${homedir}
 
 #---------------------------------------------[vim]
 export VIMINIT="source ${homedir}/codes/common/vimrc.vim"
@@ -23,7 +22,6 @@ alias cpi="cp -i"
 
 #---------------------------------------------[dir]
 software_bin=${homedir}software/bin/
-echo "software_bin="${software_bin}
 #---------------------------------------------[myserver]
 source ${homedir}server.me.sh
 
@@ -32,7 +30,6 @@ shopt | grep -q '^direxpand\b' && shopt -s direxpand
 
 shopt -s expand_aliases #启用非交互脚本alias
 shopt -s dotglob # 隐藏文件
-
 
 environment='pass'
 echo "#=========================================================================<<<"
