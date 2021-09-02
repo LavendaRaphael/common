@@ -1,5 +1,6 @@
 #!/bin/bash
 homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
+set -euo
 #set -euo pipefail
 
 myusername=lavendaraphael
