@@ -14,7 +14,7 @@ do
     git pull
     git add .
     git commit -m "auto"
-    x=$(git status | grep 'git push')
+    x=`git status | grep 'git push'`
     echo $x
     if test -n "$x";then
         echo '1'
