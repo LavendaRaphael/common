@@ -13,6 +13,7 @@ do
     cd $i
     git pull
     git add .
+    echo 'test 3'
     git commit -m "auto"
     echo 'test 2'
     gitstatus=$(git status)
