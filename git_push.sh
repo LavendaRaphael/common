@@ -15,6 +15,7 @@ do
     git add .
     git commit -m "auto"
     x=$(git status | grep 'git push')
+    echo $x
     if test -n $x;then
         echo '1'
         myurl=$(git remote -v | tail -n 1 | awk '{print $2}')
