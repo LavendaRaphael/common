@@ -14,16 +14,12 @@ do
     git pull
     git add .
     git commit -m "auto"
-    #x=`git status | grep 'git push'`
-    x=$(echo '')
-    echo $x
-    if test -n "$x";then
-        echo '1 '
+    gitstatus=$(git status)
+    if test -n "$(grep 'git push' $gitstatus)"
+    then
         myurl=$(git remote -v | tail -n 1 | awk '{print $2}')
         myurl=https://${myusername}@${myurl: 8}
         git push $myurl
     fi
-    pwd
     cd ..
-    pwd
 done
