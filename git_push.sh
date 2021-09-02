@@ -15,6 +15,7 @@ do
     git add .
     git commit -m "auto"
     gitstatus=$(git status)
+    echo 'test 1'
     if [[ "$gitstatus" == *"git push"* ]]
     then
         myurl=$(git remote -v | tail -n 1 | awk '{print $2}')
