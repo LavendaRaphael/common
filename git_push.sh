@@ -21,6 +21,7 @@ do
         myurl=https://${myusername}@${myurl: 8}
         git push $myurl
     fi
+    pwd
     cd ..
     pwd
 done
