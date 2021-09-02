@@ -14,8 +14,7 @@ do
     git pull
     git add .
     git commit -m "auto"
-    if test -n "$(git status | grep 'git push')"
-    then
+    if test -n "$(git status | grep 'git push')";then
         echo '1'
         myurl=$(git remote -v | tail -n 1 | awk '{print $2}')
         myurl=https://${myusername}@${myurl: 8}
