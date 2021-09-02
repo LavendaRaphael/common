@@ -22,4 +22,5 @@ do
         git push $myurl
     fi
     cd ..
+    pwd
 done
