@@ -1,6 +1,6 @@
 #!/bin/bash
 homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
-set -euo pipefail
+#set -euo pipefail
 
 myusername=lavendaraphael
 
@@ -17,7 +17,6 @@ do
     git commit -m "auto"
     echo 'test 2'
     gitstatus=$(git status)
-    echo 'test 1'
     if [[ "$gitstatus" == *"git push"* ]]
     then
         myurl=$(git remote -v | tail -n 1 | awk '{print $2}')
