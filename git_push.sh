@@ -20,6 +20,7 @@ do
         myurl=$(git remote -v | tail -n 1 | awk '{print $2}')
         myurl=https://${myusername}@${myurl: 8}
         git push $myurl
+        git pull
     fi
     cd ..
 done
