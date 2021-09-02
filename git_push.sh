@@ -1,7 +1,6 @@
 #!/bin/bash
 homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
-set -eu
-#set -euo pipefail
+set -euo pipefail
 
 myusername=lavendaraphael
 
@@ -14,12 +13,12 @@ do
     cd $i
     git pull
     git add .
-    echo 'test 3'
-    git commit -m "auto"
-    echo 'test 2'
     gitstatus=$(git status)
-    if [[ "$gitstatus" == *"git push"* ]]
-    then
+    if [[ "$gitstatus" == *"committed:"* ]]; then
+        git commit -m "auto"
+    fi
+    gitstatus=$(git status)
+    if [[ "$gitstatus" == *"git push"* ]]; then
         myurl=$(git remote -v | tail -n 1 | awk '{print $2}')
         myurl=https://${myusername}@${myurl: 8}
         git push $myurl
