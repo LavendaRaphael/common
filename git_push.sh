@@ -14,6 +14,7 @@ do
     git pull
     git add .
     git commit -m "auto"
+    echo 'test 2'
     gitstatus=$(git status)
     echo 'test 1'
     if [[ "$gitstatus" == *"git push"* ]]
