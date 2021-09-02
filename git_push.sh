@@ -9,7 +9,7 @@ array_dir=$(ls)
 echo $array_dir
 for i in ${array_dir}
 do
-    echo $i
+    echo ------------------------------$i
     cd $i
     git pull
     git add .
