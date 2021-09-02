@@ -15,7 +15,7 @@ do
     git add .
     git commit -m "auto"
     #x=`git status | grep 'git push'`
-    x=$(echo 'x'|grep 'git push')
+    x=$(echo 'x')
     echo $x
     if test -n "$x";then
         echo '1 '
