@@ -12,6 +12,7 @@ do
     cd $i
     git pull
     git add .
+    git status
     gitstatus=$(git status)
     if [[ "$gitstatus" == *"committed:"* ]]; then
         git commit -m "auto"
