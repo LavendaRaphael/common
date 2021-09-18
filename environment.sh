@@ -7,12 +7,14 @@ fi
 fi
 echo "#=========================================================================[environment.sh]"
 
+#-------------------------------------------------------------------------------[dir]
+homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
+software_bin=${homedir}software/bin/
+
 #-------------------------------------------------------------------------------[python]
 # not write '__pycache__' folder
 export PYTHONDONTWRITEBYTECODE=1
-
-#-------------------------------------------------------------------------------[dir]
-homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
+export PYTHONPATH=$PYTHONPATH:$software_bin
 
 #-------------------------------------------------------------------------------[vim]
 export VIMINIT="source ${homedir}/codes/common/vimrc.vim"
@@ -24,8 +26,6 @@ cdl() {
 }
 alias cpi="cp -i"
 
-#-------------------------------------------------------------------------------[dir]
-software_bin=${homedir}software/bin/
 #-------------------------------------------------------------------------------[server]
 source ${homedir}server.me.sh
 
