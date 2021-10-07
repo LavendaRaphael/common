@@ -35,6 +35,9 @@ shopt | grep -q '^direxpand\b' && shopt -s direxpand
 shopt -s expand_aliases #启用非交互脚本alias
 shopt -s dotglob # 隐藏文件
 
+#-------------------------------------------------------------------------------[color]
+# export TERM=xterm
+
 echo "#=========================================================================<<<"
 environment='pass'
 
