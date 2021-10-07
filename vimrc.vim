@@ -9,6 +9,7 @@ set nosmartindent "自动缩进
 set noautoindent
 set tw=0 "断行
 "colorscheme evening "主题
+colorscheme molokai 
 set hlsearch "搜索高亮
 let b:fortran_fixed_source=0 "fortran语法断行
 set fenc=utf-8 "编码
