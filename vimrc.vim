@@ -8,7 +8,7 @@ endif
 set nosmartindent "自动缩进
 set noautoindent
 set tw=0 "断行
-"colorscheme evening "主题
+colorscheme evening "主题
 "colorscheme molokai 
 set hlsearch "搜索高亮
 let b:fortran_fixed_source=0 "fortran语法断行
@@ -22,3 +22,15 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strf
 set nocompatible "关闭vi兼容
 set backspace=2 "删除
 set viminfo='1000 "yeld最大行数
+
+" vimplug
+call plug#begin('~/software/vimplug')
+Plug 'junegunn/seoul256.vim'
+call plug#end()
+
+" seoul256 (dark):
+"   Range:   233 (darkest) ~ 239 (lightest)
+"   Default: 237
+let g:seoul256_background = 233
+colo seoul256
+
