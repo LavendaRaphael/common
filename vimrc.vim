@@ -8,8 +8,8 @@ endif
 set nosmartindent "自动缩进
 set noautoindent
 set tw=0 "断行
-colorscheme evening "主题
-"colorscheme molokai 
+"colorscheme evening "主题
+colorscheme molokai 
 set hlsearch "搜索高亮
 let b:fortran_fixed_source=0 "fortran语法断行
 set fenc=utf-8 "编码
@@ -26,11 +26,20 @@ set viminfo='1000 "yeld最大行数
 " vimplug
 call plug#begin('~/software/vimplug')
 Plug 'junegunn/seoul256.vim'
+Plug 'sonph/onehalf', { 'rtp': 'vim' }
 call plug#end()
 
+"--------------------------------------[seoul]
 " seoul256 (dark):
 "   Range:   233 (darkest) ~ 239 (lightest)
 "   Default: 237
-let g:seoul256_background = 233
-colo seoul256
-
+"let g:seoul256_background = 233
+"colo seoul256
+"--------------------------------------[onehalf]
+set t_Co=256
+"colorscheme onehalfdark
+if exists('+termguicolors')
+  let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+  let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+  set termguicolors
+endif
