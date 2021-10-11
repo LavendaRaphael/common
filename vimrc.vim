@@ -24,10 +24,10 @@ set backspace=2 "删除
 set viminfo='1000 "yeld最大行数
 
 " vimplug
-call plug#begin('~/software/vimplug')
-Plug 'junegunn/seoul256.vim'
-Plug 'sonph/onehalf', { 'rtp': 'vim' }
-call plug#end()
+"call plug#begin('~/software/vimplug')
+"Plug 'junegunn/seoul256.vim'
+"Plug 'sonph/onehalf', { 'rtp': 'vim' }
+"call plug#end()
 
 "--------------------------------------[seoul]
 " seoul256 (dark):
