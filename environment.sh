@@ -14,6 +14,7 @@ software_bin=${homedir}software/bin/
 #-------------------------------------------------------------------------------[python]
 # not write '__pycache__' folder
 export PYTHONDONTWRITEBYTECODE=1
+
 export PYTHONPATH=$PYTHONPATH:$software_bin
 
 #-------------------------------------------------------------------------------[vim]
