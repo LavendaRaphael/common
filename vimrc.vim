@@ -25,11 +25,14 @@ set viminfo='1000 "yeld最大行数
 set t_Co=256
 
 " vimplug
-"call plug#begin('~/software/vimplug')
+call plug#begin('~/software/vimplug')
 "Plug 'junegunn/seoul256.vim'
 "Plug 'sonph/onehalf', { 'rtp': 'vim' }
-"call plug#end()
+"Plug 'morhetz/gruvbox'
+Plug 'numirias/semshi', { 'do': ':UpdateRemotePlugins' }
+call plug#end()
 
+colorscheme semshi
 "--------------------------------------[seoul]
 " seoul256 (dark):
 "   Range:   233 (darkest) ~ 239 (lightest)
