@@ -36,7 +36,7 @@ shopt -s expand_aliases #启用非交互脚本alias
 shopt -s dotglob # 隐藏文件
 
 #-------------------------------------------------------------------------------[color]
-# export TERM=xterm
+export TERM=xterm-256color
 
 #-------------------------------------------------------------------------------[path]
 PATH="$HOME/.local/bin:$PATH"

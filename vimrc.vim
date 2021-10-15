@@ -22,6 +22,7 @@ set statusline=%F%m%r%h%w\ [FORMAT=%{&ff}]\ [TYPE=%Y]\ [POS=%l,%v][%p%%]\ %{strf
 set nocompatible "关闭vi兼容
 set backspace=2 "删除
 set viminfo='1000 "yeld最大行数
+set t_Co=256
 
 " vimplug
 "call plug#begin('~/software/vimplug')
@@ -36,7 +37,6 @@ set viminfo='1000 "yeld最大行数
 "let g:seoul256_background = 233
 "colo seoul256
 "--------------------------------------[onehalf]
-set t_Co=256
 "colorscheme onehalfdark
 if exists('+termguicolors')
   let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
