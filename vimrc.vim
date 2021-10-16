@@ -7,6 +7,7 @@ endif
 "----------------------------------
 set nosmartindent   "自动缩进
 set noautoindent
+set shiftwidth=4
 
 set tw=0    "断行
 let b:fortran_fixed_source=0    "fortran语法断行
