@@ -30,12 +30,3 @@ set hlsearch    "搜索高亮
 set t_Co=256
 set background=dark
 
-"--------------------------------------[vimplug]
-call plug#begin('~/software/vimplug')
-"Plug 'NLKNguyen/papercolor-theme'
-"Plug 'tomasr/molokai'
-call plug#end()
-
-"colorscheme evening    "主题
-"colorscheme molokai
-"colorscheme PaperColor
