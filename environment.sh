@@ -8,8 +8,8 @@ fi
 echo "#=========================================================================[environment.sh]"
 
 #-------------------------------------------------------------------------------[dir]
-homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
-software_bin=${homedir}software/bin/
+export homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
+export software_bin=${homedir}software/bin/
 
 #-------------------------------------------------------------------------------[python]
 # not write '__pycache__' folder
@@ -40,7 +40,8 @@ shopt -s dotglob # 隐藏文件
 export TERM=xterm-256color
 
 #-------------------------------------------------------------------------------[path]
-PATH="$HOME/.local/bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
+export PATH="$software_bin:$PATH"
 
 echo "#=========================================================================<<<"
 environment='pass'
