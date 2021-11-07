@@ -40,7 +40,6 @@ shopt -s dotglob # 隐藏文件
 export TERM=xterm-256color
 
 #-------------------------------------------------------------------------------[path]
-export PATH="$HOME/.local/bin:$PATH"
 export PATH="$software_bin:$PATH"
 
 echo "#=========================================================================<<<"
