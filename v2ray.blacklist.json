@@ -1,0 +1,30 @@
+[
+  {
+    "inboundTag": [],
+    "outboundTag": "direct",
+    "domain": [
+      "geosite:cn",
+      "geosite:category-scholar-!cn"
+    ]
+  },
+  {
+    "inboundTag": [],
+    "outboundTag": "direct",
+    "ip": [
+      "geoip:cn",
+      "geoip:private"
+    ]
+  },
+  {
+    "inboundTag": [],
+    "outboundTag": "proxy",
+    "domain": [
+      "geosite:google"
+    ]
+  },
+  {
+    "port": "0-65535",
+    "inboundTag": [],
+    "outboundTag": "direct"
+  }
+]
