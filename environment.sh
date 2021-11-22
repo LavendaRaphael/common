@@ -41,6 +41,7 @@ export TERM=xterm-256color
 
 #-------------------------------------------------------------------------------[path]
 export PATH="$software_bin:$PATH"
+export PATH="$HOME/.local/bin:$PATH"
 
 #-------------------------------------------------------------------------------[stack]
 ulimit -s unlimited
