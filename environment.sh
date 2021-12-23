@@ -9,13 +9,13 @@ echo "#=========================================================================
 
 #-------------------------------------------------------------------------------[dir]
 export homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
-export software_bin=${homedir}software/bin/
+export software=${homedir}software/
 
 #-------------------------------------------------------------------------------[python]
 # not write '__pycache__' folder
 export PYTHONDONTWRITEBYTECODE=1
 
-export PYTHONPATH=$PYTHONPATH:$software_bin
+export PYTHONPATH=$PYTHONPATH:$software/bin
 
 #-------------------------------------------------------------------------------[vim]
 export VIMINIT="source ${homedir}/codes/common/vimrc.vim"
@@ -37,7 +37,7 @@ shopt -s dotglob # 隐藏文件
 export TERM=xterm-256color
 
 #-------------------------------------------------------------------------------[path]
-export PATH="$software_bin:$PATH"
+export PATH="$software/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 
 #-------------------------------------------------------------------------------[stack]
