@@ -13,9 +13,9 @@ export software=${homedir}software/
 
 #-------------------------------------------------------------------------------[python]
 # not write '__pycache__' folder
-export PYTHONDONTWRITEBYTECODE=1
+#export PYTHONDONTWRITEBYTECODE=1
 
-export PYTHONPATH=$PYTHONPATH:$software/bin
+export PYTHONPATH=$software/bin:$PYTHONPATH
 #-------------------------------------------------------------------------------[vim]
 export VIMINIT="source ${homedir}/codes/common/vimrc.vim"
 
@@ -39,7 +39,7 @@ export TERM=xterm-256color
 export PATH="$software/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
 export LIBRARY_PATH="$software/lib:$LIBRARY_PATH"
-export LD_LIBRARY_PATH="$software/lib/:$LD_LIBRARY_PATH"
+export LD_LIBRARY_PATH="$software/lib:$LD_LIBRARY_PATH"
 export PKG_CONFIG_PATH="$software/lib/pkgconfig:$PKG_CONFIG_PATH"
 #-------------------------------------------------------------------------------[stack]
 ulimit -s unlimited
