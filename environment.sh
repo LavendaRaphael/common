@@ -15,7 +15,7 @@ export software=${homedir}software/
 # not write '__pycache__' folder
 #export PYTHONDONTWRITEBYTECODE=1
 
-export PYTHONPATH=$software/bin:$PYTHONPATH
+export PYTHONPATH=$software/lib:$PYTHONPATH
 #-------------------------------------------------------------------------------[vim]
 export VIMINIT="source ${homedir}/codes/common/vimrc.vim"
 
