@@ -8,7 +8,8 @@ fi
 echo "#=========================================================================[environment.sh]"
 
 #-------------------------------------------------------------------------------[dir]
-export homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
+#export homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
+source $HOME/.tianff
 export software=${homedir}software/
 
 #-------------------------------------------------------------------------------[python]
@@ -41,6 +42,10 @@ export PATH="$HOME/.local/bin:$PATH"
 export LIBRARY_PATH="$software/lib:$LIBRARY_PATH"
 export LD_LIBRARY_PATH="$software/lib:$LD_LIBRARY_PATH"
 export PKG_CONFIG_PATH="$software/lib/pkgconfig:$PKG_CONFIG_PATH"
+export LIBRARY_PATH="$software/lib64:$LIBRARY_PATH"
+export LD_LIBRARY_PATH="$software/lib64:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="$software/lib64/pkgconfig:$PKG_CONFIG_PATH"
+export INCLUDE="$software/include:$CPATH"
 #-------------------------------------------------------------------------------[stack]
 ulimit -s unlimited
 
