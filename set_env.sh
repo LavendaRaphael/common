@@ -1,4 +1,4 @@
-export homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
+source $HOME/.config/.tianff
 
 source ${homedir}codes/common/environment.sh
 source ${homedir}server.me.sh

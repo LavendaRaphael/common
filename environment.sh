@@ -9,7 +9,7 @@ echo "#=========================================================================
 
 #-------------------------------------------------------------------------------[dir]
 #export homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
-source $HOME/.tianff
+source $HOME/.config/.tianff
 export software=${homedir}software/
 
 #-------------------------------------------------------------------------------[python]
@@ -45,7 +45,7 @@ export PKG_CONFIG_PATH="$software/lib/pkgconfig:$PKG_CONFIG_PATH"
 export LIBRARY_PATH="$software/lib64:$LIBRARY_PATH"
 export LD_LIBRARY_PATH="$software/lib64:$LD_LIBRARY_PATH"
 export PKG_CONFIG_PATH="$software/lib64/pkgconfig:$PKG_CONFIG_PATH"
-export INCLUDE="$software/include:$CPATH"
+export CPATH="$software/include:$CPATH"
 #-------------------------------------------------------------------------------[stack]
 ulimit -s unlimited
 
