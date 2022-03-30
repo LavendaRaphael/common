@@ -10,13 +10,12 @@ echo "#=========================================================================
 #-------------------------------------------------------------------------------[dir]
 #export homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
 source $HOME/.config/.tianff
-export software=${homedir}software/
 
 #-------------------------------------------------------------------------------[python]
 # not write '__pycache__' folder
 #export PYTHONDONTWRITEBYTECODE=1
 
-export PYTHONPATH=$software/lib:$PYTHONPATH
+export PYTHONPATH=${homedir}/lib:$PYTHONPATH
 #-------------------------------------------------------------------------------[vim]
 export VIMINIT="source ${homedir}/codes/common/vimrc.vim"
 
@@ -37,15 +36,15 @@ shopt -s dotglob # 隐藏文件
 export TERM=xterm-256color
 
 #-------------------------------------------------------------------------------[path]
-export PATH="$software/bin:$PATH"
+export PATH="${homedir}/bin:$PATH"
 export PATH="$HOME/.local/bin:$PATH"
-export LIBRARY_PATH="$software/lib:$LIBRARY_PATH"
-export LD_LIBRARY_PATH="$software/lib:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="$software/lib/pkgconfig:$PKG_CONFIG_PATH"
-export LIBRARY_PATH="$software/lib64:$LIBRARY_PATH"
-export LD_LIBRARY_PATH="$software/lib64:$LD_LIBRARY_PATH"
-export PKG_CONFIG_PATH="$software/lib64/pkgconfig:$PKG_CONFIG_PATH"
-export CPATH="$software/include:$CPATH"
+export LIBRARY_PATH="$homedir/lib:$LIBRARY_PATH"
+export LD_LIBRARY_PATH="$homedir/lib:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="$homedir/lib/pkgconfig:$PKG_CONFIG_PATH"
+export LIBRARY_PATH="$homedir/lib64:$LIBRARY_PATH"
+export LD_LIBRARY_PATH="$homedir/lib64:$LD_LIBRARY_PATH"
+export PKG_CONFIG_PATH="$homedir/lib64/pkgconfig:$PKG_CONFIG_PATH"
+export CPATH="$homedir/include:$CPATH"
 #-------------------------------------------------------------------------------[stack]
 ulimit -s unlimited
 
