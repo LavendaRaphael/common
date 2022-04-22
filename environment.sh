@@ -11,6 +11,9 @@ echo "#=========================================================================
 #export homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
 source $HOME/.config/.tianff
 
+#-------------------------------------------------------------------------------[screen]
+export SCREENDIR=$homedir/.screen
+
 #-------------------------------------------------------------------------------[python]
 # not write '__pycache__' folder
 #export PYTHONDONTWRITEBYTECODE=1
