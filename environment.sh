@@ -28,7 +28,7 @@ cdl() {
     ll -a;
 }
 alias cpi="cp -i"
-
+alias rmi="rm -Iv"
 #-------------------------------------------------------------------------------[shopt]
 shopt | grep -q '^direxpand\b' && shopt -s direxpand
 
