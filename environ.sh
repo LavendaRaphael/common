@@ -1,24 +1,18 @@
 #!/bin/bash
 # 2021.08.30
-if [ ! -z ${environment+x} ]; then
-if [ "$environment" == 'pass' ] ;then
+if [ ! -z ${common_environ+x} ]; then
+if [ "$common_environ" == 'pass' ] ;then
     return
 fi
 fi
-echo "#=========================================================================[environment.sh]"
-
-#-------------------------------------------------------------------------------[dir]
-#export homedir=`find ~ -maxdepth 3 -name "server.me.sh" -print -quit|xargs dirname`/
-source $HOME/.config/.tianff
+echo ">>>>----[common/environ.sh]---->>>>"
 
 #-------------------------------------------------------------------------------[screen]
 export SCREENDIR=$homedir/.screen
 
 #-------------------------------------------------------------------------------[python]
-# not write '__pycache__' folder
-#export PYTHONDONTWRITEBYTECODE=1
-
 export PYTHONPATH=${homedir}/lib:$PYTHONPATH
+
 #-------------------------------------------------------------------------------[vim]
 export VIMINIT="source ${homedir}/codes/common/vimrc.vim"
 
@@ -48,9 +42,10 @@ export LIBRARY_PATH="$homedir/lib64:$LIBRARY_PATH"
 export LD_LIBRARY_PATH="$homedir/lib64:$LD_LIBRARY_PATH"
 export PKG_CONFIG_PATH="$homedir/lib64/pkgconfig:$PKG_CONFIG_PATH"
 export CPATH="$homedir/include:$CPATH"
+
 #-------------------------------------------------------------------------------[stack]
 ulimit -s unlimited
 
-echo "#=========================================================================<<<"
-environment='pass'
+echo "<<<<--------<<<<"
+common_environ='pass'
 

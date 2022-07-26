@@ -1,10 +1,9 @@
 #!/bin/bash
-source $HOME/.config/.tianff
 set -euo pipefail
 
 myusername=lavendaraphael
 
-cd ${homedir}codes
+cd ${homedir}/codes
 array_dir=$(ls)
 for i in ${array_dir}
 do
